@@ -43,6 +43,9 @@ def get_japanese_emoticon(library, english_emoticon)
       if value = english_emoticon
         japanese_emoticon = library_hash[emoticon_name][:japanese]
       # binding.pry
+    else
+      return "Sorry, that emoticon was not found"
+    end
     end
   end
   japanese_emoticon
