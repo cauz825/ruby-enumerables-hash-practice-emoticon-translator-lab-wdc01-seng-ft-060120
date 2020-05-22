@@ -45,4 +45,5 @@ def get_japanese_emoticon(library, english_emoticon)
       # binding.pry
     end
   end
+  japanese_emoticon
 end
