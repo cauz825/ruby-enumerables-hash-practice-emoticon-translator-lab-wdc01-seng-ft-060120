@@ -19,9 +19,9 @@ def get_english_meaning(library, japanese_emoticon)
   english_meaning = " "
   library_hash = load_library(library)
   library_hash.each do |emoticon_name, emoticon_language|
-    # binding.pry
-    if emoticon_language == [:japanese]
-      english_meaning = [emoticon_name].to_s
+    if emoticon_language.include?(japanese_emoticon)
+      english_meaning = emoticon_name.to_s
+    binding.pry
     else
       return "Sorry, that emoticon was not found"
     end
