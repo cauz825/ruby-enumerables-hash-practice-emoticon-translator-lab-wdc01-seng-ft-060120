@@ -23,6 +23,7 @@ def get_english_meaning(library, japanese_emoticon)
       # binding.pry
       if value == japanese_emoticon
         english_meaning = library_hash[emoticon_name].to_s
+        binding.pry
       else
         return "Sorry, that emoticon was not found"
     end
