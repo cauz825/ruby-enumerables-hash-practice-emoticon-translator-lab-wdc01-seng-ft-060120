@@ -16,13 +16,17 @@ end
 def get_english_meaning(library, japanese_emoticon)
   # code goes here
   # input = "japanese_emoticon", output = emoticon_name
+  english_meaning = " "
   library_hash = load_library(library)
   library_hash.each do |emoticon_name, emoticon_language|
+    binding.pry
     if emoticon_language == [:japanese]
-      # need to return name of emoticon (emoticon_name?)
-      return japanese_emoticon = library_hash[:emoticon_name]
+      english_meaning = [emoticon_name].to_s
+    else
+      return "Sorry, that emoticon was not found"
     end
   end
+  english_meaning
 end
   
   
