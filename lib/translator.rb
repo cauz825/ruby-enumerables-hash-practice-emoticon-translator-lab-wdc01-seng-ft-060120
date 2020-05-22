@@ -21,7 +21,7 @@ def get_english_meaning(library, japanese_emoticon)
   library_hash.each do |emoticon_name, emoticon_language|
     emoticon_language.each do |key, value|
       binding.pry
-      if value[2] == japanese_emoticon
+      if value[1] == japanese_emoticon
         english_meaning = library_hash[emoticon_name].to_s
       else
         return "Sorry, that emoticon was not found"
