@@ -24,7 +24,7 @@ def get_english_meaning(library, japanese_emoticon)
       if value == japanese_emoticon
         english_meaning = emoticon_name
       else
-        return "Sorry, that emoticon was not found"
+        english_meaning = "Sorry, that emoticon was not found"
       end
     end
   end
